@@ -1,0 +1,5 @@
+.idea
+*.tar.gz
+.DS_Store
+.env
+.docker/
