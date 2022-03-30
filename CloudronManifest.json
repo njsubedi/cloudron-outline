@@ -6,7 +6,7 @@
   "title": "Outline Wiki",
   "author": "Outline authors",
   "tagline": "Your team’s knowledge base",
-  "version": "0.61.1",
+  "version": "0.62.0",
   "icon": "manifest/logo.png",
   "description": "file://manifest/DESCRIPTION.md",
   "changelog": "file://manifest/CHANGELOG.md",
