@@ -1,6 +1,6 @@
 ## What
 
-Run [Outline](https://www.getoultine.com/) on [Cloudron](https://cloudron.io)
+Run [Outline](https://www.getoutline.com/) on [Cloudron](https://cloudron.io)
 
 ## Why
 
