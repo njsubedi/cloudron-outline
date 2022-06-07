@@ -18,10 +18,18 @@ if [[ ! -f /app/data/env ]]; then
     echo "=> Disable auto-update check; does not work in readonly filesystem"
     crudini --set /app/data/env "" ENABLE_UPDATES "false"
 
-    echo "=> Remove dummy Slack Values"
+    echo "=> Remove dummy Slack Values if they do not already exist"
     crudini --set /app/data/env "" SLACK_KEY ""
     crudini --set /app/data/env "" SLACK_SECRET ""
+    crudini --set /app/data/env "" SLACK_VERIFICATION_TOKEN ""
+    crudini --set /app/data/env "" SLACK_APP_ID ""
+    crudini --set /app/data/env "" SLACK_MESSAGE_ACTIONS ""
+    crudini --set /app/data/env "" SLACK_CLIENT_ID ""
 fi
+
+# Fix error: "SLACK_CLIENT_ID must be set to use SLACK_APP_ID and SLACK_APP_SECRET
+# If the SLACK_CLIENT_ID is not set, sets it to an empty value.
+crudini --set /app/data/env "" SLACK_CLIENT_ID "$(crudini --get /app/data/env '' SLACK_CLIENT_ID)"
 
 echo "Setting up database"
 crudini --set /app/data/env "" DATABASE_URL "postgres://${CLOUDRON_POSTGRESQL_USERNAME}:${CLOUDRON_POSTGRESQL_PASSWORD}@${CLOUDRON_POSTGRESQL_HOST}:${CLOUDRON_POSTGRESQL_PORT}/${CLOUDRON_POSTGRESQL_DATABASE}"
