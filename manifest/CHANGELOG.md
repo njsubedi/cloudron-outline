@@ -1,3 +1,6 @@
+v0.66.3
+Version bump to [0.66.3](https://github.com/outline/outline/releases)
+
 v0.65.2
 Version bump to [0.65.2](https://github.com/outline/outline/releases)
 
