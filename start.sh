@@ -25,6 +25,7 @@ if [[ ! -f /app/data/env ]]; then
     crudini --set /app/data/env "" SLACK_APP_ID ""
     crudini --set /app/data/env "" SLACK_MESSAGE_ACTIONS ""
     crudini --set /app/data/env "" SLACK_CLIENT_ID ""
+    crudini --set /app/data/env "" SLACK_CLIENT_SECRET ""
 fi
 
 # Fix error: "SLACK_CLIENT_ID must be set to use SLACK_APP_ID and SLACK_APP_SECRET
