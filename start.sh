@@ -35,7 +35,7 @@ crudini --set /app/data/env "" SLACK_CLIENT_ID "$(crudini --get /app/data/env ''
 echo "Setting up database"
 crudini --set /app/data/env "" DATABASE_URL "postgres://${CLOUDRON_POSTGRESQL_USERNAME}:${CLOUDRON_POSTGRESQL_PASSWORD}@${CLOUDRON_POSTGRESQL_HOST}:${CLOUDRON_POSTGRESQL_PORT}/${CLOUDRON_POSTGRESQL_DATABASE}"
 crudini --set /app/data/env "" PGSSLMODE "disable"
-crudini --set /app/data/env "" REDIS_URL "${CLOUDRON_REDIS_URL}"
+crudini --set /app/data/env "" REDIS_URL "redis://:${CLOUDRON_REDIS_PASSWORD}@${CLOUDRON_REDIS_HOST}"
 
 echo "Setting up app location"
 crudini --set /app/data/env "" URL "${CLOUDRON_APP_ORIGIN}"
