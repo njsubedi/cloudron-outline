@@ -56,7 +56,8 @@ mkdir -p /run/.yarn /run/.cache
 chown -R cloudron:cloudron /app/data /run/.yarn /run/.cache
 
 echo "Run migrations"
-gosu cloudron:cloudron yarn db:migrate --env=production-ssl-disabled
+echo "No need to run, as this is done by Outline"
+#gosu cloudron:cloudron yarn db:migrate --env=production-ssl-disabled
 
 echo "==> starting server"
 exec /usr/local/bin/gosu cloudron:cloudron yarn start

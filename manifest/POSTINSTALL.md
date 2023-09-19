@@ -1,4 +1,4 @@
-Outline is set up to authenticate only with an existing OIDC server, like Keycloak.
+Outline is set up to authenticate only with an existing OIDC server, like Cloudron itself.
 
 On your OIDC Provider, follow these steps:
 
@@ -22,9 +22,9 @@ OIDC_CLIENT_SECRET=<your-client-secret>
 # Required URLs for authentication using Oauth 2.0
 # For example, on Keycloak running on the domain <auth.example.com>
 # And, the client is added to the reaml called "cloudron"
-OIDC_AUTH_URI=https://auth.example.com/realms/cloudron/protocol/openid-connect/auth
-OIDC_TOKEN_URI=https://auth.example.com/realms/cloudron/protocol/openid-connect/token
-OIDC_USERINFO_URI=https://auth.example.com/realms/cloudron/protocol/openid-connect/userinfo
+OIDC_AUTH_URI=https://my.example.com/openid/auth
+OIDC_TOKEN_URI=https://my.example.com/openid/token
+OIDC_USERINFO_URI=https://my.example.com/openid/me
 
 
 
